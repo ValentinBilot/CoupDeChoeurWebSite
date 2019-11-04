@@ -2,6 +2,20 @@
   align-self: center;
   align-items: center;
   flex-direction: column;
+  background-color: #ffefef;
+}
+
+#logo{
+  max-height: 60px;
+}
+
+.nav-link{
+  font-weight: bold;
+  color: black;
+}
+
+#navbarNav{
+  padding:0px;
 }
 .navbar-nav{
   display: flex;
