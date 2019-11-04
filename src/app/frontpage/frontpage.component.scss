@@ -1,0 +1,14 @@
+$img-width: device-width;
+
+
+.front-img{
+  max-width:1000px;
+  flex:1;
+}
+
+.front{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: stretch;
+}
