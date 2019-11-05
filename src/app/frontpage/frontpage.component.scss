@@ -49,13 +49,6 @@ $img-width: device-width;
   align-items: stretch;
 }
 
-@media screen and (max-width: 800px){
-  .front-img-text{
-    font-size: 20px;
-    color: white;
-  }
-}
-
 .text2{
   font-family: Bookman, URW Bookman L, serif ;
   display: grid;
@@ -64,4 +57,16 @@ $img-width: device-width;
   min-height: 100px;
   margin:3%;
   font-size: 1.5em;
+}
+
+@media screen and (max-width: 800px){
+  .front-img-text{
+    font-size: 16px;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+  }
+
+  .text2{
+    font-size: 1.2em;
+  }
 }
