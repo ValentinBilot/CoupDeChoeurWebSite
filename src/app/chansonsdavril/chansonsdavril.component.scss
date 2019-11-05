@@ -1,0 +1,159 @@
+$img-width: device-width;
+$color1 : #ffefef;
+$color2: #fffafa;
+$color3: #ffaaaa;
+$color4: #942222;
+$color5: #440000;
+
+.presentation{
+  display: flex;
+  flex-direction: column;
+  grid-column: 2 / 4;
+  grid-row: 1/10;
+  margin: 10px;
+}
+
+h1{
+  text-align: center;
+}
+
+
+.front-img{
+  width: inherit;
+  height: 100%;
+}
+
+.front-container{
+  transition: opacity 1s, text-shadow 1s, color 2s;
+  color: rgba(1.0,1.0,1.0,0.0);
+}
+
+.front-container:hover{
+  opacity: 0.95;
+  text-shadow: 0px black;
+  color: rgba(1.0,0.7,0.7,0.3);
+}
+
+.front-container{
+  position: relative;
+  width: 100%;
+}
+
+#front-1{
+  grid-row: 1;
+  grid-column: 1;
+}
+#front-2{
+  grid-row: 1;
+  grid-column: 2
+}
+#front-3{
+  grid-row: 1;
+  grid-column: 3;
+}
+#front-4{
+  grid-row: 1;
+  grid-column: 4;
+}
+#front-5{
+  grid-row: 2;
+  grid-column: 1;
+}
+#front-6{
+  grid-row: 2;
+  grid-column: 2;
+}
+#front-7{
+  grid-row: 2;
+  grid-column: 3;
+}
+#front-8{
+  grid-row: 2;
+  grid-column: 4;
+}
+
+#front-2, #front-3, #front-6, #front-7{
+  opacity: 0.2;
+}
+
+.front{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  justify-content:space-around;
+  align-items: stretch;
+}
+
+.front-img-text{
+  position: absolute;
+  left: 0;
+  top: 45%;
+  width: 100%;
+  text-align: center;
+  font-size: 10px;
+  font-style: Bookman, URW Bookman L, serif ;
+}
+
+
+.text2{
+  font-family: Bookman, URW Bookman L, serif ;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  min-height: 100px;
+  margin-top:3%;
+  font-size: 1.5em;
+  transition: transform 2s;
+
+}
+
+@media screen and (max-width: 800px){
+
+  #front-1{
+    grid-row: 1;
+    grid-column: 1;
+    display: none;
+  }
+  #front-2{
+    grid-row: 1;
+    grid-column: 1;
+  }
+  #front-3{
+    grid-row: 2;
+    grid-column: 1;
+    display: none;
+  }
+  #front-4{
+    grid-row: 3;
+    grid-column: 1;
+  }
+  #front-5{
+    grid-row: 2;
+    grid-column: 1;
+    opacity: 0.2;
+  }
+  #front-6{
+    grid-row: 2;
+    grid-column: 1;
+    display:none;
+  }
+  #front-7, #front-8{
+    display:none;
+  }
+
+
+  .front{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    justify-content:space-around;
+    align-items: stretch;
+  }
+  .presentation{
+    display: flex;
+    flex-direction: column;
+    grid-column: 1;
+    grid-row: 2/3;
+    margin: 10px;
+  }
+
+}
