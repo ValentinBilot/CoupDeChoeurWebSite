@@ -89,37 +89,45 @@ $color5: #440000;
 
 @-webkit-keyframes movemydiv {
   from {
-      transform: translateX(-3px) rotate(-5deg);
+      transform: translateX(0px) rotate(0deg);
+      color:$color5;
+  }
+  25% {
+      transform: translateX(3px) rotate(5deg);
       color:black;
   }
-  50% {
-      transform: translateX(3px) rotate(5deg);
+  75% {
+      transform: translateX(-3px) rotate(-5deg);
       color:$color5;
   }
   to {
-      transform: translateX(-3px) rotate(-5deg);
+      transform: translateX(0px) rotate(0deg);
       color:black;
   }
 }
 
 @keyframes movemydiv {
   from {
-      transform: translateX(-3px) rotate(-5deg);
-      color:black;
-  }
-  50% {
-      transform: translateX(3px) rotate(5deg);
+      transform: translateX(0px) rotate(0deg);
       color:$color5;
   }
-  to {
-      transform: translateX(-3px) rotate(-5deg);
+  25% {
+      transform: translateX(3px) rotate(5deg);
       color:black;
+  }
+  75% {
+      transform: translateX(-3px) rotate(-5deg);
+      color:$color4;
+  }
+  to {
+      transform: translateX(0px) rotate(0deg);
+      color:$color5;
   }
 }
 
 
 .text2:hover{
-transform: translateY(-20px);
+transform: translateY(-15px);
 }
 
 
@@ -127,5 +135,6 @@ transform: translateY(-20px);
 {
     -webkit-animation: movemydiv 2s ease-in-out infinite;
     animation: movemydiv 2s ease-in-out infinite;
+    animation-delay: 5s;
     color:$color5;
 }

@@ -9,12 +9,16 @@ import { Routes, RouterModule} from '@angular/router';
 import { FrontpageComponent } from './frontpage/frontpage.component';
 import { ChoristesSpaceComponent } from './choristes-space/choristes-space.component';
 import { AuthGuardService } from "./services/auth-guard.service";
+import { ChoraleComponent } from './chorale/chorale.component';
+import { ChansonsdavrilComponent } from './chansonsdavril/chansonsdavril.component';
 
 
 
 
 const routes:Routes = [
   {path: 'choristes_space', canActivate:[AuthGuardService], component: ChoristesSpaceComponent},
+  {path: 'chorale', component: ChoraleComponent},
+  {path: 'chansonsdavril', component: ChansonsdavrilComponent},
   {path: '', component:FrontpageComponent},
   {path: '**', redirectTo: 'frontpage', pathMatch:'full'}
 ]
@@ -24,7 +28,9 @@ const routes:Routes = [
     AppComponent,
     NavbarComponent,
     FrontpageComponent,
-    ChoristesSpaceComponent
+    ChoristesSpaceComponent,
+    ChoraleComponent,
+    ChansonsdavrilComponent
   ],
   imports: [
     BrowserModule,
