@@ -81,8 +81,6 @@ $color5: #440000;
 
 }
 
-
-
 @media screen and (max-width: 800px){
   .front-img-text{
     font-size: 16px;
@@ -93,4 +91,15 @@ $color5: #440000;
   .text2{
     font-size: 1.2em;
   }
+}
+
+.presentation{
+  display: flex;
+  flex-direction: column;
+  grid-column: 2 / 4;
+  margin: 10px;
+}
+
+h1{
+  text-align: center;
 }
