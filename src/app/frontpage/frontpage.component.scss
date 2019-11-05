@@ -1,5 +1,9 @@
 $img-width: device-width;
-
+$color1 : #ffefef;
+$color2: #fffafa;
+$color3: #ffaaaa;
+$color4: #942222;
+$color5: #440000;
 
 .front-img{
   width: inherit;
@@ -55,10 +59,10 @@ $img-width: device-width;
   flex-direction: row;
   justify-content: center;
   text-align: center;
-  width: 100%;
   min-height: 100px;
   margin-top:3%;
   font-size: 1.5em;
+  transition: transform 2s;
 
 }
 
@@ -85,54 +89,43 @@ $img-width: device-width;
 
 @-webkit-keyframes movemydiv {
   from {
-      transform: translateX(0px);
+      transform: translateX(-3px) rotate(-5deg);
+      color:black;
   }
-
-
-  20% {
-      transform: translateX(5px) rotate(5deg);
+  50% {
+      transform: translateX(3px) rotate(5deg);
+      color:$color5;
   }
-
-  60% {
-      transform: translateX(-5px) rotate(-5deg);
-  }
-
-  80% {
-      transform: translate(5px, 0px) rotate(5deg);
-  }
-
   to {
-      transform: translate(-5px, 0px) rotate(-5deg);
-      border-radius: 30px;
+      transform: translateX(-3px) rotate(-5deg);
+      color:black;
   }
 }
 
 @keyframes movemydiv {
   from {
-      transform: translateX(0px);
+      transform: translateX(-3px) rotate(-5deg);
+      color:black;
   }
-
-
-  20% {
-      transform: translateX(5px) rotate(5deg);
+  50% {
+      transform: translateX(3px) rotate(5deg);
+      color:$color5;
   }
-
-  60% {
-      transform: translateX(-5px) rotate(-5deg);
-  }
-
-  80% {
-      transform: translate(5px, 0px) rotate(5deg);
-  }
-
   to {
-      transform: translate(-5px, 0px) rotate(-5deg);
-      border-radius: 30px;
+      transform: translateX(-3px) rotate(-5deg);
+      color:black;
   }
 }
 
+
+.text2:hover{
+transform: translateY(-20px);
+}
+
+
 .dancing-letter
 {
-    -webkit-animation: movemydiv 2s ease-in-out infinite alternate;
-    animation: movemydiv 2s ease-in-out infinite alternate;
+    -webkit-animation: movemydiv 2s ease-in-out infinite;
+    animation: movemydiv 2s ease-in-out infinite;
+    color:$color5;
 }
