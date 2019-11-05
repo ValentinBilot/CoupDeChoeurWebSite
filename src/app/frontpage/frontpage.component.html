@@ -17,5 +17,8 @@
 </div>
 
 <div class="text2">
-  <p>La Musique c'est trop génial ! :o</p>
+  <div class="dancing-letter" *ngFor="let item of text_array;">
+    {{item}}
+    <div class="space" *ngIf="item===' '"></div>
+  </div>
 </div>

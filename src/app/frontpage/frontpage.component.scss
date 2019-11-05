@@ -35,7 +35,7 @@ $img-width: device-width;
 .front-img-text{
   position: absolute;
   left: 0;
-  top: 50%;
+  top: 45%;
   width: 100%;
   text-align: center;
   font-size: 40px;
@@ -51,13 +51,18 @@ $img-width: device-width;
 
 .text2{
   font-family: Bookman, URW Bookman L, serif ;
-  display: grid;
-  grid-column: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   text-align: center;
+  width: 100%;
   min-height: 100px;
-  margin:3%;
+  margin-top:3%;
   font-size: 1.5em;
+
 }
+
+
 
 @media screen and (max-width: 800px){
   .front-img-text{
@@ -69,4 +74,65 @@ $img-width: device-width;
   .text2{
     font-size: 1.2em;
   }
+}
+
+.space{
+  padding:5px;
+}
+
+
+//Animations of text
+
+@-webkit-keyframes movemydiv {
+  from {
+      transform: translateX(0px);
+  }
+
+
+  20% {
+      transform: translateX(5px) rotate(5deg);
+  }
+
+  60% {
+      transform: translateX(-5px) rotate(-5deg);
+  }
+
+  80% {
+      transform: translate(5px, 0px) rotate(5deg);
+  }
+
+  to {
+      transform: translate(-5px, 0px) rotate(-5deg);
+      border-radius: 30px;
+  }
+}
+
+@keyframes movemydiv {
+  from {
+      transform: translateX(0px);
+  }
+
+
+  20% {
+      transform: translateX(5px) rotate(5deg);
+  }
+
+  60% {
+      transform: translateX(-5px) rotate(-5deg);
+  }
+
+  80% {
+      transform: translate(5px, 0px) rotate(5deg);
+  }
+
+  to {
+      transform: translate(-5px, 0px) rotate(-5deg);
+      border-radius: 30px;
+  }
+}
+
+.dancing-letter
+{
+    -webkit-animation: movemydiv 2s ease-in-out infinite alternate;
+    animation: movemydiv 2s ease-in-out infinite alternate;
 }
