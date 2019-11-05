@@ -82,21 +82,14 @@ $color5: #440000;
 }
 
 @media screen and (max-width: 800px){
-  .front-img-text{
-    font-size: 16px;
-    color: white;
-    text-shadow: 2px 2px 2px black;
-  }
-
-  .text2{
-    font-size: 1.2em;
-  }
 }
+
 
 .presentation{
   display: flex;
   flex-direction: column;
   grid-column: 2 / 4;
+  grid-row: 1/10;
   margin: 10px;
 }
 
