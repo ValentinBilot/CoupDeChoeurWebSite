@@ -5,6 +5,19 @@ $color3: #ffaaaa;
 $color4: #942222;
 $color5: #440000;
 
+.presentation{
+  display: flex;
+  flex-direction: column;
+  grid-column: 2 / 4;
+  grid-row: 1/10;
+  margin: 10px;
+}
+
+h1{
+  text-align: center;
+}
+
+
 .front-img{
   width: inherit;
   height: 100%;
@@ -27,7 +40,7 @@ $color5: #440000;
 }
 
 #front-1{
-  grid-row: 1;
+  grid-row: 2;
   grid-column: 1;
 }
 #front-2{
@@ -35,7 +48,7 @@ $color5: #440000;
   grid-column: 4;
 }
 #front-3{
-  grid-row: 2;
+  grid-row: 1;
   grid-column: 1;
 }
 #front-4{
@@ -43,12 +56,31 @@ $color5: #440000;
   grid-column: 4;
 }
 #front-5{
-  grid-row: 3;
-  grid-column: 1;
+  grid-row: 1;
+  grid-column: 2;
+  opacity: 0.2;
 }
 #front-6{
-  grid-row: 3;
-  grid-column: 4
+  grid-row: 1;
+  grid-column: 3;
+  opacity: 0.2;
+}
+#front-7{
+  grid-row: 2;
+  grid-column: 2;
+  opacity: 0.2;
+}
+#front-8{
+  grid-row: 2;
+  grid-column: 3;
+  opacity: 0.2;
+}
+
+.front{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  justify-content:space-around;
+  align-items: stretch;
 }
 
 .front-img-text{
@@ -61,12 +93,6 @@ $color5: #440000;
   font-style: Bookman, URW Bookman L, serif ;
 }
 
-.front{
-  display: grid;
-  grid-template-columns: repeat(4,1fr);
-  justify-content:space-around;
-  align-items: stretch;
-}
 
 .text2{
   font-family: Bookman, URW Bookman L, serif ;
@@ -82,17 +108,52 @@ $color5: #440000;
 }
 
 @media screen and (max-width: 800px){
-}
+
+  #front-1{
+    grid-row: 1;
+    grid-column: 1;
+    display: none;
+  }
+  #front-2{
+    grid-row: 1;
+    grid-column: 1;
+  }
+  #front-3{
+    grid-row: 2;
+    grid-column: 1;
+    display: none;
+  }
+  #front-4{
+    grid-row: 3;
+    grid-column: 1;
+  }
+  #front-5{
+    grid-row: 2;
+    grid-column: 1;
+    opacity: 0.2;
+  }
+  #front-6{
+    grid-row: 2;
+    grid-column: 1;
+    display:none;
+  }
+  #front-7, #front-8{
+    display:none;
+  }
 
 
-.presentation{
-  display: flex;
-  flex-direction: column;
-  grid-column: 2 / 4;
-  grid-row: 1/10;
-  margin: 10px;
-}
+  .front{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    justify-content:space-around;
+    align-items: stretch;
+  }
+  .presentation{
+    display: flex;
+    flex-direction: column;
+    grid-column: 1;
+    grid-row: 2/3;
+    margin: 10px;
+  }
 
-h1{
-  text-align: center;
 }
